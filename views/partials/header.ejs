@@ -1,0 +1,86 @@
+<!DOCTYPE <html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <title><%= pageTitle %></title>
+  <meta name="author" content="Leon Darko">
+  <meta name="description" content="A Resume website for Leon Darko, a web developer and mobile app developer">
+  <meta name="keywords" content="Leon Darko, Leon Darko Resume,
+  Leon Darko CV, Resume, CV, Mobile App Developer, Web Developer, Web designer">
+
+  <!-- Mobile Specific meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Embeded Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+Pro:wght@300;600&display=swap"
+    rel="stylesheet">
+  <!-- Font-awesome and Google Icons -->
+  <script src="https://kit.fontawesome.com/dcd356c426.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- External Css  -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Google AdSense -->
+  <script data-ad-client="ca-pub-3196668453132234" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body class="w3-white">
+
+  <!-- Preloader -->
+  <div id="loader">
+    <img src="images/logo-gif.gif" alt="Logo gif" style="width:100%;">
+  </div>
+  <!-- Preloader -->
+
+  <div style="display:none;" id="myDiv">
+    <div id="about"></div>
+    <!-- nav with name on the left and email on the right -->
+    <div class="topnav topnav-container animate-top-topnav">
+      <a class="img" href="/">
+        <img src="images/logo2.png" alt="Logo" style="width:56px;">
+      </a>
+      <a href="<%= selfRoute %>" class="w3-wide w3-hide-small w3-text-indigo typeWriter"><%= pageTitle %> </a>
+      <div class="topnavright">
+        <a href="<%= route %>" class="w3-wide w3-hide-medium w3-hide-small typeWriter">
+          <%= linkName %> <i class="fa fa-arrow-right"></i>
+        </a>
+
+        <a href="javascript:void(0)" id="openNav" class="w3-medium w3-hide-large">
+          <i class="fa fa-bars w3-text-indigo"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Fullscreen Navigation -->
+
+    <div id="myNav" class="overlay animate-top-topnav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <div class="overlay-content">
+        <a href="#"><img src="/images/logo.png" alt="Logo" style="width:35px; margin:10 auto;"></a>
+        <a href="/blog">Blog</a>
+        <a href="/">About</a>
+        <a href="/#resume">Resume</a>
+        <a href="/#contact">Contact</a>
+        <a href="/downloads/Resume.pdf" download>
+          <button class="zoom w3-button w3-wide animate-opacity-download-btn
+          w3-indigo w3-medium">
+            Resume <i class="far fa-file-pdf w3-text-white"></i>
+          </button>
+        </a>
+        <a href="#" class="w3-tiny">Designed & Built by Leon Darko</a>
+      </div>
+
+    </div><!-- Fullscreen Navigation -->

@@ -1,0 +1,74 @@
+<%- include("partials/header"); -%>
+    <!-- Slide Show -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <div class="w3-row">
+
+                <div class="w3-col l6 m12 w3-padding-8">
+                    <a href="/<%= posts[posts.length - 1]._id %>">
+                        <div class="image-container">
+                            <img class="w3-image w3-card w3-round w3-hover-shadow"
+                                src="/images/blog-images/<%= posts[posts.length - 1].BImg %>" alt="Blog post image">
+                            <div class="text">
+                                <span class="w3-wide">
+                                    <%= posts[posts.length - 1].date %>
+                                </span>
+                                <h3 class="w3-margin-0">
+                                    <%= posts[posts.length - 1].title %>
+                                </h3>
+                                <p class="w3-hide-small">
+                                    <%= posts[posts.length - 1].p1.slice(0, 90) + "..." ; %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <a class="prev w3-card"><i class="fas fa-chevron-left w3-large"></i></a>
+    <a class="next w3-card"><i class="fas fa-chevron-right w3-large"></i></a>
+
+    <!-- Slide Show -->
+
+    <div class="all-posts-container">
+        <h1 class="w3-text-indigo">All Posts</h1>
+
+        <div class="w3-row w3-margin w3-round">
+            <% for (var i=posts.length - 1; i>= 0; i--) { %>
+                <a href="/<%= posts[i]._id %>">
+                    <div class="w3-col l6 m6 w3-padding-small w3-padding-8">
+                        <div class="w3-round w3-border w3-hover-shadow">
+                            <img class="w3-image w3-round" src="/images/blog-images/<%= posts[i].BImg %>"
+                                alt="Blog post image">
+                            <div class="w3-padding-large w3-border-bottom w3-border-indigo w3-round">
+                                <h2>
+                                    <%= posts[i].title %>
+                                </h2>
+
+                                <div class="w3-row-padding">
+                                    <p class="w3-col l3 m3 s3 w3-text-charcoal w3-wide">
+                                        <%= posts[i].date %>
+                                    </p>
+    
+                                    <p class="w3-col l9 m9 s9">
+                                        <%= posts[posts.length - 1].p1.slice(0, 80) + "..." ; %>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+
+    </div>
+
+    <%- include("partials/footer"); -%>

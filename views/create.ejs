@@ -1,0 +1,227 @@
+<%- include("partials/header"); -%>
+    <div class="main-container w3-light-grey">
+        <form class="w3-card w3-padding-large w3-round-large w3-white" action="/create" method="post">
+            <div class="w3-row">
+
+                <h2 class="w3-padding-24"> <i class="fas fa-pen-alt w3-text-indigo"></i> Create Post</h2>
+
+                <div class="w3-col l3 w3-padding-12">
+                    <label>Date</label>
+                    <input class="w3-input" type="text" name="date" value="<%= date %>" required>
+                </div>
+                <div class="w3-col l6 w3-padding-12">
+                    <label>Title</label>
+                    <input class="w3-input" type="text" name="title" placeholder="Type Title here..." autocomplete="off"
+                        required>
+                </div>
+                <div class="w3-col l3 w3-padding-12">
+                    <label>Read Durations</label>
+                    <input class="w3-input" type="text" name="read" placeholder="Type read duration here..." autocomplete="off">
+                </div>
+
+            </div>
+
+            <br>
+
+            <!-- Images -->
+            <div class="w3-row">
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <label>Banner Image</label>
+                    <input class="w3-input" type="text" title="Ex: img1.png" name="BImg"
+                        placeholder="Type image name here" autocomplete="off" required>
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <label>Image Name 1</label>
+                    <input class="w3-input" type="text" title="Ex: img2.png" name="img1"
+                        placeholder="Type image name here" autocomplete="off" required>
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <label>Image Name 2</label>
+                    <input class="w3-input" type="text" title="Ex: img3.png" name="img2"
+                        placeholder="Type image name here..." autocomplete="off">
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <label>Image Name 3</label>
+                    <input class="w3-input" type="text" title="Ex: img4.png" name="img3"
+                        placeholder="Type image name here" autocomplete="off">
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Description -->
+            <div class="w3-row">
+                <div class="w3-col l4 m6 w3-padding-12">
+                    <label>Brand Name</label>
+                    <textarea class="w3-input" name="bname" rows="2" placeholder="Brand Name" autocomplete="off"
+                        required></textarea>
+                </div>
+
+                <div class="w3-col l8 m6 w3-padding-12">
+                    <label>Description</label>
+                    <textarea class="w3-input" name="desc" rows="2" placeholder="Description" autocomplete="off"
+                        required></textarea>
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-col l4 m6 w3-padding-12">
+                    <label>Phone</label>
+                    <input class="w3-input" type="tel" name="phone" placeholder="123-45-678"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" autocomplete="off" required>
+                </div>
+
+                <div class="w3-col l8 m6 w3-padding-12">
+                    <label>Email</label>
+                    <input class="w3-input" type="email" name="email" placeholder="Type Email here..."
+                        autocomplete="off" required>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Website & Business Location -->
+            <div class="w3-row">
+                <div class=" w3-col l6 m6 w3-padding-12">
+                    <i class="fas fa-globe"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="website"
+                        placeholder="Website" autocomplete="off">
+                </div>
+                <div class="w3-col l6 m6 w3-padding-12">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="location"
+                        placeholder="location link" autocomplete="off" required>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Socials -->
+            <div class="w3-row">
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <i class="fab fa-instagram"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="ig"
+                        placeholder="Instagram link" autocomplete="off">
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <i class="fab fa-twitter"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="tw"
+                        placeholder="Twitter link" autocomplete="off">
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <i class="fab fa-facebook-f"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="fb"
+                        placeholder="Facebook link" autocomplete="off">
+                </div>
+                <div class="w3-col l3 m6 w3-padding-12">
+                    <i class="fab fa-youtube"></i>
+                    <input class="w3-input" type="text" title="Ex: https://Instagram.com/examplebrand" name="yt"
+                        placeholder="YouTube link" autocomplete="off">
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Paragraphs -->
+            <div class="w3-row">
+                <div class="w3-col l6 m6 w3-padding-12">
+                    <label>Paragraph 1</label>
+                    <textarea class="w3-input" name="p1" rows="2" placeholder="Type Mission Statement here..."
+                        autocomplete="off" required></textarea>
+                </div>
+
+                <div class=" w3-col l6 m6 w3-padding-12">
+                    <label>Paragraph 2</label>
+                    <textarea class="w3-input" name="p2" rows="2" placeholder="Type About text here..."
+                        autocomplete="off" required></textarea>
+                </div>
+
+                <div class="w3-col l6 m6 w3-padding-12">
+                    <label>Paragraph 3</label>
+                    <textarea class="w3-input" name="p3" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+
+                <div class=" w3-col l6 m6 w3-padding-12">
+                    <label>Paragraph 4</label>
+                    <textarea class="w3-input" name="p4" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+
+            </div>
+            <br>
+            <!-- Sub Headings & Supporting Paragraphs -->
+            <div class="w3-row">
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 1</label>
+                    <input class="w3-input" type="text" name="sh1"  autocomplete="off">
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 2</label>
+                    <input class="w3-input" type="text" name="sh2"  autocomplete="off">
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 3</label>
+                    <input class="w3-input" type="text" name="sh3"  autocomplete="off">
+                </div>
+
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 1</label>
+                    <textarea class="w3-input" name="sp1" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 2</label>
+                    <textarea class="w3-input" name="sp2" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 3</label>
+                    <textarea class="w3-input" name="sp3" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="w3-row">
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 4</label>
+                    <input class="w3-input" type="text" name="sh4"  autocomplete="off">
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 5</label>
+                    <input class="w3-input" type="text" name="sh5"  autocomplete="off">
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Subhead 6</label>
+                    <input class="w3-input" type="text" name="sh6"  autocomplete="off">
+                </div>
+
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 1</label>
+                    <textarea class="w3-input" name="sp4" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 2</label>
+                    <textarea class="w3-input" name="sp5" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+                <div class="w3-col l4 w3-padding-12">
+                    <label>Supporting Paragraph 3</label>
+                    <textarea class="w3-input" name="sp6" rows="2" placeholder="Type text here..."
+                        autocomplete="off"></textarea>
+                </div>
+            </div>
+
+            <div class="w3-padding-12 w3-right-align">
+                <button type="reset" class="w3-button w3-white w3-hover-red w3-round-xxlarge"><i
+                        class="fas fa-remove-format"></i> Clear</button>
+                <button class="w3-button w3-indigo w3-hover-teal w3-round-xxlarge w3-card"><i class="fas fa-pen-alt"></i>
+                    Compose</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include("partials/footer"); -%>

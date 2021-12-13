@@ -1,0 +1,152 @@
+<%- include("partials/header"); -%>
+    <div class="post-title-container">
+
+        <span class="w3-text-indigo w3-wide">
+            <%= date %>
+        </span>
+
+        <h1 class="post-title w3-padding-16">
+            <%= title %>
+        </h1>
+
+        <span class="w3-text-grey w3-hover-text-indigo">
+            <i class="fas fa-link w3-large"></i>
+        </span>
+        &nbsp;
+        <span class="w3-text-indigo w3-wide">
+            <%= read %> read
+        </span>
+
+
+
+    </div>
+
+    <div class="post-banner-container">
+        <img class="w3-image w3-card w3-round" src="/images/blog-images/<%= BImg %>" alt="">
+    </div>
+
+    <div class="post-content-container">
+
+        <h2 class="w3-wide bname">
+            <%= bname %>
+        </h2>
+
+        <p class="w3-text-indigo">
+            <i class="fas fa-info-circle"></i> &nbsp; <%= desc %>
+        </p>
+
+        <div class="w3-row">
+            <div class="w3-col l9 w3-padding-8">
+                <div class="w3-padding-4">
+                    <i class="w3-text-indigo fas fa-phone"></i> &nbsp;
+                    <a class="link w3-hover-text-indigo" href="tel:<%= phone %>">
+                        <%= phone %>
+                            &nbsp; <i class="fas fa-phone w3-tiny"></i>
+                    </a>
+                </div>
+                <div class="w3-padding-4">
+                    <i class="w3-text-indigo fas fa-at"></i> &nbsp;
+                    <a class="link w3-hover-text-indigo" href="mailto:<%= email %>">
+                        <%= email %>
+                            &nbsp; <i class="fas fa-external-link-alt w3-tiny"></i>
+                    </a>
+                </div>
+                <div class="w3-padding-4">
+                    <i class="w3-text-indigo fas fa-globe"></i> &nbsp;
+                    <a class="link w3-hover-text-indigo" href="<%= website %>" target="blank">
+                        <%= website %>
+                            &nbsp; <i class="fas fa-external-link-alt w3-tiny"></i>
+                    </a>
+                </div>
+                <div class="w3-padding-4">
+                    <i class="w3-text-indigo fas fa-map-marked-alt"></i> &nbsp;
+                    <a class="link w3-hover-text-indigo" href="<%= location %>" target="blank">
+                        Google Maps
+                        &nbsp; <i class="fas fa-external-link-alt w3-tiny"></i>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="w3-col l3 w3-padding-8 socials-col">
+                <span class="socials">
+                    <span class="follow w3-text-charcoal">Social Profiles</span>
+                    <a href="<%= insta %>"><i class="fab fa-instagram w3-hover-text-purple w3-large"></i></a>
+                    <a href="<%= fb %>"><i class="fab fa-facebook-f w3-hover-text-indigo w3-large"></i></a>
+                    <a href="<%= tw %>"><i class="fab fa-twitter w3-hover-text-blue w3-large"></i></a>
+                    <a href="<%= yt %>"><i class="fab fa-youtube w3-hover-text-red w3-large"></i></a>
+                </span>
+            </div>
+        </div>
+
+        <p>
+            <%= p1 %>
+        </p>
+        <p>
+            <%= p2 %>
+        </p>
+
+        <h2>
+            <%= sh1 %>
+        </h2>
+        <p> <%= sp1 %> </p>
+
+        <h2>
+            <%= sh2 %>
+        </h2>
+        <p><%= sp2 %></p>
+    </div>
+
+    <div class="post-content-container">
+        <div class="w3-center post-img-container">
+            <img class="w3-image w3-card w3-round" src="/images/blog-images/<%= img1 %>" alt="">
+        </div>
+
+        <p>
+            <%= p3 %>
+        </p>
+
+
+        <h2>
+            <%= sh3 %>
+        </h2>
+        <p>
+            <%= sp3 %>
+        </p>
+
+        <h2>
+            <%= sh4 %>
+        </h2>
+        <p><%= sp4 %></p>
+
+        <h2>
+            <%= sh5 %>
+        </h2>
+        <p><%= sp5 %></p>
+
+        <h2>
+            <%= sh6 %>
+        </h2>
+        <p><%= sp6 %></p>
+
+        <div class="w3-center post-img-container">
+            <img class="w3-image w3-card w3-round" src="/images/blog-images/<%= img2 %>" alt="">
+        </div>
+        <p>
+            <%= p4 %>
+        </p>
+    </div>
+
+
+
+    <div class="post-footer-container w3-light-grey w3-center">
+        <h6><span class="w3-text-indigo">OUTSTRETCH</span> • OUR MISSION</h6>
+        <h1 class="w3-padding-24">Helping serious businessess gain a wider audience.</h1>
+        <a href="">
+            <button class="w3-button w3-round-xxlarge w3-indigo w3-hover-white w3-card zoom w3-wide">
+                <strong>About Us</strong> &nbsp;
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </a>
+    </div>
+    <%- include("partials/footer"); -%>
